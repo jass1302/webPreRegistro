@@ -8,10 +8,12 @@
 	//	
 
 	echo "<table class='outputT'>";
+	echo "<thead>";
 	echo "<tr>";
 	echo "<td>Horario</td>";
 	echo "<td>Acción</td>";
 	echo "</tr>";
+	echo "</thead>";
 	while($registro = mysqli_fetch_array($resultado))
 	{
 		echo "<tr>";
