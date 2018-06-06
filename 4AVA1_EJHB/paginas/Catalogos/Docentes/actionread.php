@@ -16,6 +16,7 @@ mysqli_query($Link,$tabla);
 	//	
 
 	echo "<table class='outputT'>";
+	echo "<thead>";
 	echo "<tr>";
 	echo "<td>Número de empleado</td>";
 	echo "<td>Nombre</td>";
@@ -23,6 +24,7 @@ mysqli_query($Link,$tabla);
 	echo "<td>Apellido Materno</td>";
 	echo "<td>Acción</td>";
 	echo "</tr>";
+	echo "<thead>";
 	while($registro = mysqli_fetch_array($resultado))
 	{
 		echo "<tr>";
