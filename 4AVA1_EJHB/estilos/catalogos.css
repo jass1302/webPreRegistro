@@ -1,10 +1,13 @@
+/* ---- Establece el color del placeholder de los input-text de los catalogos ----*/
 ::placeholder{
 	color: #9c1f4d;
 }
+/*---- Establece el color de los links de acciones de los catalogos ----*/
 a{
 	color: #9c1f4d;
 }
 
+/* ---- Establece las carácteristicas principales de estilo de las tablas de registro de catalogos*/
 table.inputT{
 	margin: auto;
   margin-top: 10px;
@@ -12,14 +15,24 @@ table.inputT{
 	font-size: 20px;
 }
 
-
+/* ---- Establece las carácteristicas principales de estilo de las tablas que obtienen los registros de la base de datos ----*/
 table.outputT{
 	margin: auto;
 	margin-top: 15px; 
 	width: 97%;
 	font-size: 18px;
   text-align: center;
-	border: #000000 1px solid; 
+  border-collapse: collapse;
+	background-color: white;
+}
+table.outputT td,th{
+  border: #bb285c 1px solid; 
+  padding: 17px;
+}
+
+thead{
+  background-color: #bb285c;
+  color: white;
 }
 
 
