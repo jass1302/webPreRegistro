@@ -7,6 +7,7 @@
   <a href="" name="email" id="email">Email</a>
   <a href="" name="mensajeria" id="mensajeria">Mensajería</a>
   <a href="" name="reportes" id="reportes">Reportes</a>
+    <a href="?link=registro"" name="registro" id="registro">Registro</a>
   <div class="dropdown">
     <button class="dropbtn">Catalogos</button>
     <div class="dropdown-content">
