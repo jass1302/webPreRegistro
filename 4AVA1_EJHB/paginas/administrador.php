@@ -11,7 +11,7 @@
   <div class="dropdown">
     <button class="dropbtn">Catalogos</button>
     <div class="dropdown-content">
-      <a href="" name="" id="" value = "">Pagos</a>
+      <a href="?link=pago" name="" id="" value = "">Pagos</a>
       <a href="?link=edificios" name="" id="" value = "">Edificios</a>
       <a href="?link=aulas" name="">Aulas</a>
       <a href="?link=horarios" name="" id="" value = "">Horarios</a>
