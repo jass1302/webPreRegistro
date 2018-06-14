@@ -2,6 +2,7 @@ function guardarAjax()
 {
 	//1. Referencias a nuestros campos
 	var varCosita = $("#grupo").val();
+	alert(varCosita);
 	//2. Validar
 	//alert(varDocumento);
 	//3. Mandar los datos al servidor usando Ajax jQuery
@@ -15,7 +16,7 @@ function guardarAjax()
 			alert("Error: "+p2);
 		},
 		success:function(respuesta,estado,jqxhr){
-			//alert("Exito: "+respuesta);
+			alert("Exito: "+respuesta);
 			actionReadAJAX();
 		}
 

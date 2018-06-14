@@ -8,9 +8,10 @@
 	//Paso 2: Conexión
 	$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 	//Paso 3: Cadena de Alta de tipo de pagos
-	$QueryAlta = "INSERT INTO grupo (id,nombre) VALUES(null,'".$varName."')";
+	$QueryAlta = "INSERT INTO c_grupo (id_grupo,nombre_grupo) VALUES(null,'".$varName."')";
 	//Paso 4: Ejecutar Consulta
 	mysqli_query($Link,$QueryAlta);
+	echo $QueryAlta;
 	if(mysqli_affected_rows($Link)>0)
 	{
 		echo "Registro exitoso";

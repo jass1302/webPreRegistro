@@ -5,7 +5,7 @@
 
 	$Hyahhh =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 
-	$qry = "UPDATE grupo SET nombre ='".$Cosita."' WHERE id = ".$idEdit.";";
+	$qry = "UPDATE c_grupo SET nombre_grupo ='".$Cosita."' WHERE id_grupo = ".$idEdit.";";
 
 	mysqli_query($Hyahhh,$qry);
 
