@@ -2,11 +2,17 @@
 	margin: 0px;
 	padding: 0px;
 }
+h1{
+	color: white;
+}
+/*----*/
 #cuerpo_inv{
 	margin: auto;
 	position: relative;
 	width: 97%;
-	height: 700px;
+	height: auto;
+	min-height: 900px;
+	
 	border: 1px solid #9c1f4d;
 }
 #cuerpo_fondo{
@@ -23,11 +29,17 @@
 	top: 0;
 	left:0;
 	width: 100%;
-	height:100%;
+	height: 100%;
 } 
+/*	---- los tres divs anteriores corresponden al bloque del cuerpo de la página: */
+				/* ---- El inv reserva el espacio que usará	----	*/
+				/* ---- El cuerpo_fondo pone el background dentro del espacio reservado */
+				/* ---- El cuerpo_cont es el div donde meteremos las distintas páginas a utilizar 
+				en la web para que se carguen dentro del cuerpo establecido */
+		/* --- -----------------------------------------------------------------------------------*/
 #divsito{
 	width: 100%;
-	height: 5.5%;
+	height: 5.7%;
 	background-color: #bb285c;
 	text-align: center;
 	text-shadow:  2px 2px #9c1f4d;
@@ -41,9 +53,12 @@
 	text-align: center;
 	text-shadow:  2px 2px #9c1f4d;
 }
-h1{
-	color: white;
-}
+
+/* --- divsito 1 y 2, corresponden a los bloques donde aparece el nombre de las secciones principales 
+										y las subsecciones del menú de administrador respectivamente */
+
+
+
 #cuerpo_cont table.galeria{
 	margin: auto;
 	width: 100%;

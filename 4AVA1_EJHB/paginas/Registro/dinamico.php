@@ -1,10 +1,10 @@
 <?php
-$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","upiiz_hernandeze");
+$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 echo "<tr><td>Primera Opción </td>";
 echo "<td><select name='carrera1' id='carrera1'>";
 echo "<option value='0'>Seleccione una carrera</option>";
 
-$QueryCCar="SELECT * FROM carrera";
+$QueryCCar="SELECT * FROM c_carrera";
 //6.-Ejecutar la Query = Consulta = Tabla 
 $TodasLasCarreras = mysqli_query($Link,$QueryCCar);
 //Obtener todos los registros de la tabla
@@ -32,7 +32,7 @@ echo "<tr><td>Tercera Opción </td>";
 echo "<td><select name='carrera3' id='carrera3'>";
 echo "<option value='0'>Seleccione una carrera</option>";
 
-$QueryCCar="SELECT * FROM carrera";
+$QueryCCar="SELECT * FROM c_carrera";
 //6.-Ejecutar la Query = Consulta = Tabla 
 $TodasLasCarreras = mysqli_query($Link,$QueryCCar);
 //Obtener todos los registros de la tabla

@@ -3,8 +3,8 @@ function guardarAjax()
 	//1. Referencias a nuestros campos
 	var varId = $("#id").val();
 	var varNombre = $("#nombre").val();
-	var varApPat = $("#apPat").val();
-	var varApMat = $("#apMat").val();
+	var varApPat = $("#ape_paterno").val();
+	var varApMat = $("#ape_materno").val();
 	//2. Validar
 	//alert(varDocumento);
 	//3. Mandar los datos al servidor usando Ajax jQuery
@@ -73,8 +73,8 @@ function actionGetDataAJAX(id)
 			{
 				$("#id").val(objJSON.idrl);
 				$("#nombre").val(objJSON.namerl);
-				$("#apPat").val(objJSON.pat);
-				$("#apMat").val(objJSON.mat);
+				$("#ape_paterno").val(objJSON.pat);
+				$("#ape_materno").val(objJSON.mat);
 				$("#idEditar").val(objJSON.idrl);
 				$("#guardar").val("Update");
 				$("#guardar").attr( 'onclick', 'actionEditAJAX();');
@@ -94,8 +94,8 @@ function actionEditAJAX()
 	var varedit = $("#idEditar").val();
 	var varId = $("#id").val();
 	var varNombre = $("#nombre").val();
-	var varApPat = $("#apPat").val();
-	var varApMat = $("#apMat").val();
+	var varApPat = $("#ape_paterno").val();
+	var varApMat = $("#ape_materno").val();
 	
 	//alert(varedit+varNombre+varApPat+varApMat);
 	//alert("viejo id: "+varedit+" NuevoID: "+varId);
@@ -110,7 +110,7 @@ function actionEditAJAX()
 		},
 		success:function(p1,p2,p3)
 		{
-			$("#guardar").val("Save");
+			$("#guardar").val("Registrar");
 			$("#guardar").attr( 'onclick', 'guardarAjax();');
 			actionReadAJAX();
 		}

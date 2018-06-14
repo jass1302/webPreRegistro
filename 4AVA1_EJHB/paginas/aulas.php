@@ -26,7 +26,6 @@
 </form>
 	<!--Para mostrar la tabla-->
 	<div id="showtable"></div>
-
 <script type="text/javascript">
 	//Cuando se cargue la página
 	$(document).ready(function(){

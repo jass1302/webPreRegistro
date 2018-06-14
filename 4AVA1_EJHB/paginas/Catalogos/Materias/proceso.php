@@ -6,9 +6,9 @@
 	//echo "Cantidad:".$varCant."<br>Documento: ".$varDoc;
 
 	//Paso 2: Conexión
-	$Link = mysqli_connect("localhost","upiiz_hernandeze","hernandeze","upiiz_hernandeze");
+	$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 	//Paso 3: Cadena de Alta de tipo de pagos
-	$QueryAlta = "INSERT INTO materia (id,nombre) VALUES(null,'".$varName."')";
+	$QueryAlta = "INSERT INTO c_materia (id_asignatura,nombre_asignatura) VALUES(null,'".$varName."')";
 	//Paso 4: Ejecutar Consulta
 	mysqli_query($Link,$QueryAlta);
 	if(mysqli_affected_rows($Link)>0)

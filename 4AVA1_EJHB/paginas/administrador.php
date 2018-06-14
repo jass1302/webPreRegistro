@@ -1,13 +1,13 @@
 <div id="divsito"> <h1>Menú de Administrador</h1> </div>
 <link rel="stylesheet" type="text/css" href="estilos/barra_catalogos.css">
   <div class="topnav">
-    
-      <a href="" name="pagos" id="pagos">Pagos</a>
+  
+  <a href="?link=pagos" name="pagos" id="pagos">Pagos</a>
   <a href="" name="grupos" id="grupos">Grupos</a>
   <a href="" name="email" id="email">Email</a>
   <a href="" name="mensajeria" id="mensajeria">Mensajería</a>
   <a href="" name="reportes" id="reportes">Reportes</a>
-    <a href="?link=registro"" name="registro" id="registro">Registro</a>
+  <a href="?link=registro"" name="registro" id="registro">Registro</a>
   <div class="dropdown">
     <button class="dropbtn">Catalogos</button>
     <div class="dropdown-content">

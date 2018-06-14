@@ -4,7 +4,7 @@
 	$idGetData = $_GET['idGetData'];
 
 	//Paso 2: Conexión
-	$Link = mysqli_connect("localhost","upiiz_hernandeze","hernandeze","upiiz_hernandeze");
+	$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 	//Paso 3: Cadena de Eliminar
 	$QueryGet = "SELECT * FROM grupo WHERE id =".$idGetData.";";
 	//Paso 4: Ejecutar Consulta

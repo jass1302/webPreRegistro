@@ -1,5 +1,4 @@
-
-	<?php
+<?php
 
 	$topnav = file_get_contents("paginas/administrador.php");
 	echo $topnav."<br><br>";
@@ -21,26 +20,26 @@
 						</tr>
 
 						<tr>
-							<td width="40%" >Nombre</td>
+							<td>Nombre</td>
                             <td> <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>  </td>
 						</tr>
 
 						<tr>
-							<td width="40%">Apellido Paterno</td>
+							<td>Apellido Paterno</td>
                             <td><input type="text" id="apaterno" name="apaterno" placeholder="Apellido Paterno" required/></td>
 						</tr>
 
 						<tr>
-							<td width="40%">Apellido Materno</td>
+							<td>Apellido Materno</td>
                             <td><input type="text" id="amaterno" name="amaterno" placeholder="Apellido Materno" required/></td>
 						</tr>
 
 						<tr>
-							<td width="40%">Fecha de Nacimiento</td>
+							<td>Fecha de Nacimiento</td>
                             <td><input type="date" id="date" name="date" value="2000-01-01" required/></td>
 						</tr>
 						<tr>
-							<td width="40%">Sexo</td>
+							<td>Sexo</td>
                             <td>
                             	<input name="genero" class="gener" type="radio" value="M" checked/> Masculino 
                             	<input name="genero" class="gener" type="radio" value="F" /> Femenino
@@ -52,25 +51,25 @@
 						</tr>
 
 						<tr>
-							<td width="40%">Telefono Movil</td>
+							<td>Telefono Movil</td>
                             <td><input type="tel" id="telM" name="telM" placeholder="Movil" maxlength="10" required="">  </td>
 						</tr>
 
 						<tr>
-							<td width="40%">Telefono  fijo</td>
+							<td>Telefono  fijo</td>
                             <td><input type="tel" id="telF" name="telF" placeholder="Telefono"  maxlength="10" required></td>
 						</tr>
 
 						<tr>
-							<td width="40%">Correo electronico</td>
+							<td>Correo electronico</td>
                             <td><input type="email" id="correo" name="correo" placeholder="e-mail" required/></td>
 						</tr>
 					</tr>
 						<tr>
-							<th width="40%" colspan="2">Interes en la Institucion</th>
+							<th colspan="2">INTERÉS EN LA INSTITUCIÓN</th>
 						</tr>
 						<tr>
-							<td width="40%">¿Esta interesado en ingresar a UPIIZ o IPN en general?</td>
+							<td>¿Está interesado en ingresar a UPIIZ o IPN en general?</td>
                             <td>
                             	<input name="Interes" class="Intere" type="radio" value="1" /> Si
                             	<input name="Interes" class="Intere" type="radio" value="0"  checked/> No

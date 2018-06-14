@@ -1,16 +1,17 @@
 function guardarAjax()
 {
 	//1. Referencias a nuestros campos
-	var varCosita = $("#aula").val();
+	var varcantidad = $("#cantidad").val();
+	var varDocumento = $("#documento").val();
 	//2. Validar
-	//alert(varCosita);
+	//alert(varDocumento);
 	//3. Mandar los datos al servidor usando Ajax jQuery
 
 	//Create
 
 	$.ajax({
-		url:"paginas/Catalogos/Aulas/proceso.php",
-		data:{ name: varCosita},
+		url:"paginas/Catalogos/Pago/proceso.php",
+		data:{cantidad: varcantidad,documento: varDocumento},
 		error:function(p1,p2,p3){
 			alert("Error: "+p2);
 		},
@@ -27,9 +28,9 @@ function guardarAjax()
 function actionReadAJAX()
 {
 	$.ajax({
-		url:"paginas/Catalogos/Aulas/actionread.php",
+		url:"paginas/Catalogos/Pago/actionread.php",
 		error: function(p1,p2,p3){
-			alert("read"+p3);
+			alert(p2);
 		},
 		success: function(d,p2,p3){
 			$("#showtable").html(d);
@@ -37,11 +38,11 @@ function actionReadAJAX()
 	});
 }
 
-function actionDeleteAJAX(id_aula)
+function actionDeleteAJAX(id)
 {
 	$.ajax({
-		url:"paginas/Catalogos/Aulas/actiondelete.php",
-		data:{idEliminar:id_aula},		
+		url:"paginas/Catalogos/Pago/actiondelete.php",
+		data:{idEliminar:id},		
 		error: function(p1,p2,p3){
 			alert(p3);
 		},
@@ -51,33 +52,31 @@ function actionDeleteAJAX(id_aula)
 	});
 }
 
-function actionGetDataAJAX(id_aula)
+function actionGetDataAJAX(id)
 {
 	$.ajax({
-		url:"paginas/Catalogos/Aulas/actiongetdata.php",
-		data:{idGetData: id_aula},
+		url:"paginas/Catalogos/Pago/actiongetdata.php",
+		data:{idGetData: id},
 		error: function(p1,p2,p3)
 		{
-			alert("get"+p3);
+			alert(p3);
 		},
 		success:function(data,p2,p3)
 		{
 			//JSON
-
 			var objJSON = JSON.parse(data);
 			//alert(objJSON.id);
 			if(objJSON.idrl>0)
 			{
-				$("#aula").val(objJSON.namerl);
+				$("#cantidad").val(objJSON.cantidad);
+				$("#documento").val(objJSON.documento);
 				$("#idEditar").val(objJSON.idrl);
 				$("#guardar").val("Update");
 				$("#guardar").attr( 'onclick', 'actionEditAJAX();');
-
-				
 			}
 			else
 			{
-				alert("Ocurrió un error desconocidorl");
+				alert("Ocurrió un error desconocidor");
 			}	
 		}
 	});
@@ -86,17 +85,20 @@ function actionGetDataAJAX(id_aula)
 function actionEditAJAX()
 {	
 	var varedit = $("#idEditar").val();
-	var varCosita = $("#aula").val();
-
-	//alert(varedit);
+	var varId = $("#id").val();
+	var varcantidad = $("#cantidad").val();
+	var varDocumento = $("#documento").val();
+	
+	//alert(varedit+varNombre+varApPat+varApMat);
+	//alert("viejo id: "+varedit+" NuevoID: "+varId);
 	//alert(varCosita);
 
 	$.ajax({
-		url:"paginas/Catalogos/Aulas/actionedit.php",
-		data:{idEditar: varedit, cosita: varCosita},
+		url:"paginas/Catalogos/Pago/actionedit.php",
+		data:{Edit:varedit,id:varId, cantidad: varcantidad, documento:varDocumento},
 		error:function(p1,p2,p3)
 		{
-			alert("edit"+p3);
+			alert(p3);
 		},
 		success:function(p1,p2,p3)
 		{

@@ -11,9 +11,10 @@
 	//data:{name: varNombre, apPat: varApMat, apMat: varApMat,dateN: varDate,genero: varGenero,telm: varTelM, telf: VarTelF,email: VarMail}
 
 	//Paso 2: Conexión
-	$Link = new mysqli("localhost","upiiz_hernandeze","hernandeze","upiiz_hernandeze");
+	$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 	//Paso 3: Cadena de Alta de tipo de pagos
-	$QueryAlta = "INSERT INTO `interesado` (`id_interesado`, `nombre_pila`, `a_paterno`, `a_materno`, `fecha_nacimiento`, `correo_electronico`, `genero`, `telefono_movil`, `telefono_fijo`) VALUES (NULL,'".$varName."', '".$varapPat."', '".$varapMat."', '".$varDate."', '".$varGenero."','".$varTelM."', '".$VarTelF."', '".$VarMail."')";
+	$QueryAlta = "INSERT INTO `interesado` (`id_interesado`, `nombre_pila`, `a_paterno`, `a_materno`, `fecha_nacimiento`, `correo_electronico`, `sexo`, `telefono_movil`, `telefono_fijo`) VALUES (NULL,'".$varName."', '".$varapPat."', '".$varapMat."', '".$varDate."', '".$VarMail."','".$varGenero."', '".$varTelM."', '".$VarTelF."')";
+	
 
 	//Paso 4: Ejecutar Consulta
 	mysqli_query($Link,$QueryAlta);

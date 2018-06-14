@@ -1,8 +1,8 @@
 <?php
 	//1.Conexión	
-	$Link = mysqli_connect("localhost","upiiz_hernandeze","hernandeze","upiiz_hernandeze");
+	$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 	//2.
-	$qry = "SELECT * FROM edificio;";
+	$qry = "SELECT * FROM c_edificio;";
 	//
 	$resultado = mysqli_query($Link,$qry);
 	//	
@@ -18,8 +18,8 @@
 	{
 		echo "<tr>";
 		echo "<td>".$registro['nombre']."</td>";
-		$X = "<a href='javascript:void(0);' onclick='actionDeleteAJAX(".$registro['id'].");'>X</a>";
-		$A = "<a href='javascript:void(0);' onclick='actionGetDataAJAX(".$registro['id'].");'>A</a>";
+		$X = "<a href='javascript:void(0);' onclick='actionDeleteAJAX(".$registro['id_edificio'].");'>X</a>";
+		$A = "<a href='javascript:void(0);' onclick='actionGetDataAJAX(".$registro['id_edificio'].");'>A</a>";
 		echo "<td>[".$X."|".$A."]</td>";
 		echo "</tr>";
 	}

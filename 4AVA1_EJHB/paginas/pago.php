@@ -1,8 +1,6 @@
 <?php
-
 	$topnav = file_get_contents("paginas/administrador.php");
 	echo $topnav."<br><br>";
-
 ?>
 	<script src="paginas/Catalogos/Pago/jquery.js" type="text/javascript"></script>
 	<script src="paginas/Catalogos/Pago/js.js" type="text/javascript"></script>

@@ -1,6 +1,6 @@
 <?php
 	//1.Conexión	
-	$Link = mysqli_connect("localhost","upiiz_hernandeze","hernandeze","upiiz_hernandeze");
+	$Link =  new mysqli("localhost","upiiz_hernandeze","hernandeze","curso_de_preparacion");
 	
 	$tabla = "CREATE TABLE IF NOT EXISTS `grupo` (
   `id` int(11) NOT NULL,

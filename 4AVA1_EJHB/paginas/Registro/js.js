@@ -21,7 +21,7 @@ function guardarAjax()
 
 	$.ajax({
 		url:"paginas/Registro/insertar.php",
-		data:{name: varNombre, apPat: varApMat, apMat: varApMat,dateN: varDate,genero: varGenero,telm: varTelM, telf: VarTelF,email: VarMail},
+		data:{name: varNombre, apPat: varApPat, apMat: varApMat,dateN: varDate,genero: varGenero,telm: varTelM, telf: VarTelF,email: VarMail},
 		error:function(p1,p2,p3){
 			alert("Error: "+p2);
 		},

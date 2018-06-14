@@ -23,11 +23,11 @@
 		</tr>
 		<tr>
 			<td>Apellido Paterno:</td>
-			<td><input type="text" name="cosita" id="apPat" placeholder="Digite el primer apellido"></td>
+			<td><input type="text" name="cosita" id="ape_paterno" placeholder="Digite el primer apellido"></td>
 		</tr>
 		<tr>
 			<td>Apellido Materno: </td>
-			<td><input type="text" name="cosita" id="apMat" placeholder="Digite el segundo apellido"></td>
+			<td><input type="text" name="cosita" id="ape_materno" placeholder="Digite el segundo apellido"></td>
 		</tr>
 	</table>
 	<table class="inputT">
