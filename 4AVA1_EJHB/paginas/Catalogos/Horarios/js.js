@@ -3,7 +3,6 @@ function guardarAjax()
 	//1. Referencias a nuestros campos
 	var varCosita = $("#horario").val();
 	//2. Validar
-	//alert(varDocumento);
 	//3. Mandar los datos al servidor usando Ajax jQuery
 
 	//Create
