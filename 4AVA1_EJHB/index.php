@@ -260,7 +260,7 @@
   mysqli_query($link,$estado);
 
    $hori = "CREATE TABLE IF NOT EXISTS `curso_de_preparacion`.`horario` (
-  `id_horario` INT NOT NULL,
+  `id_horario` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(15) NOT NULL,
   PRIMARY KEY (`id_horario`),
   UNIQUE INDEX `id_edificio_UNIQUE` (`id_horario` ASC))";
@@ -269,7 +269,7 @@
 
 
     $gru = "CREATE TABLE IF NOT EXISTS `curso_de_preparacion`.`c_grupo` (
-  `id_grupo` INT NOT NULL,
+  `id_grupo` INT NOT NULL AUTO_INCREMENT,
   `nombre_grupo` VARCHAR(45) NOT NULL,
   `c_aula_id_aula` INT NOT NULL,
   `c_edificio_id_edificio` INT NOT NULL,
@@ -309,7 +309,7 @@
 
 
 $asis = "CREATE TABLE IF NOT EXISTS `curso_de_preparacion`.`asistencia` (
-  `id_fecha` INT NOT NULL,
+  `id_fecha` INT NOT NULL AUTO_INCREMENT,
   `fecha` DATE NOT NULL,
   `edo_asist` INT NULL,
   `interesado_has_asignatura_interesado_id_interesado` INT NOT NULL,
