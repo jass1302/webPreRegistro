@@ -1,35 +1,22 @@
 function guardarAjax()
 {
 	//1. Referencias a nuestros campos
-	var varCosita = $("#grupo").val();
-	//alert(varCosita);
-
-	var varidEd = $('#edificio').val();
-	//alert(varidEd);
-
-	var varidau = $('#aula').val();
-	//alert(varidau);
-
-	var varidhor = $('#horario').val();
-	//alert(varidhor);
-
+	var varMateria = $("#materia").val();
+	var varProfe = $("#profesor").val();	
+	var varGrupo = $("#grupo").val();
 	//2. Validar
-	//alert(varDocumento);
 	//3. Mandar los datos al servidor usando Ajax jQuery
 
 	//Create
 
 	$.ajax({
-		url:"paginas/Catalogos/Grupos/proceso.php",
-		data:{ name: varCosita, 
-			   idEd: varidEd, 
-			   idAu: varidau, 
-			   idH: varidhor},
+		url:"paginas/asignatura/proceso.php",
+		data:{ materia: varMateria, profe: varProfe, grupo: varGrupo},
 		error:function(p1,p2,p3){
 			alert("Error: "+p2);
 		},
 		success:function(respuesta,estado,jqxhr){
-			alert("Exito: "+respuesta);
+			//alert("Exito: "+respuesta);
 			actionReadAJAX();
 		}
 
@@ -41,7 +28,7 @@ function guardarAjax()
 function actionReadAJAX()
 {
 	$.ajax({
-		url:"paginas/Catalogos/Grupos/actionread.php",
+		url:"paginas/asignatura/actionread.php",
 		error: function(p1,p2,p3){
 			alert(p2);
 		},
@@ -54,7 +41,7 @@ function actionReadAJAX()
 function actionDeleteAJAX(id)
 {
 	$.ajax({
-		url:"paginas/Catalogos/Grupos/actiondelete.php",
+		url:"paginas/asignatura/actiondelete.php",
 		data:{idEliminar:id},		
 		error: function(p1,p2,p3){
 			alert(p3);
@@ -68,7 +55,7 @@ function actionDeleteAJAX(id)
 function actionGetDataAJAX(id)
 {
 	$.ajax({
-		url:"paginas/Catalogos/Grupos/actiongetdata.php",
+		url:"paginas/asignatura/actiongetdata.php",
 		data:{idGetData: id},
 		error: function(p1,p2,p3)
 		{
@@ -82,19 +69,17 @@ function actionGetDataAJAX(id)
 			//alert(objJSON.id);
 			if(objJSON.idrl>0)
 			{
-				$("#grupo").val(objJSON.namerl);
-				$('#edificio').val(objJSON.Edi);
-				$('#aula').val(objJSON.Au);
-				$('#horario').val(objJSON.Hr);
 				$("#idEditar").val(objJSON.idrl);
+				$("#materia").val(objJSON.mate);
+				$("#profesor").val(objJSON.prof);
+				$("#grupo").val(objJSON.grup);
 				$("#guardar").val("Actualizar");
 				$("#guardar").attr( 'onclick', 'actionEditAJAX();');
-
 				
 			}
 			else
 			{
-				alert("Ocurrió un error desconocido.");
+				alert("Ocurrió un error desconocidorl");
 			}	
 		}
 	});
@@ -103,17 +88,16 @@ function actionGetDataAJAX(id)
 function actionEditAJAX()
 {	
 	var varedit = $("#idEditar").val();
-	var varCosita = $("#grupo").val();
-	var varidEd = $('#edificio').val();
-	var varidau = $('#aula').val();
-	var varidhor = $('#horario').val();
+	var varMateria = $("#materia").val();
+	var varProfe = $("#profesor").val();
+	var varGrupo = $("#grupo").val();
 
 	//alert(varedit);
 	//alert(varCosita);
 
 	$.ajax({
-		url:"paginas/Catalogos/Grupos/actionedit.php",
-		data:{idEditar: varedit, cosita: varCosita, idEd: varidEd, idau: varidau, idhor: varidhor},
+		url:"paginas/asignatura/actionedit.php",
+		data:{idEditar: varedit, materia: varMateria, profe: varProfe, grupo: varGrupo},
 		error:function(p1,p2,p3)
 		{
 			alert(p3);

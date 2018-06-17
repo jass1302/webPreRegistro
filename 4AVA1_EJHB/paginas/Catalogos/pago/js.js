@@ -16,7 +16,7 @@ function guardarAjax()
 			alert("Error: "+p2);
 		},
 		success:function(respuesta,estado,jqxhr){
-			//alert("Exito: "+respuesta);
+			alert("Exito: "+respuesta);
 			actionReadAJAX();
 		}
 
@@ -71,12 +71,12 @@ function actionGetDataAJAX(id)
 				$("#cantidad").val(objJSON.cantidad);
 				$("#documento").val(objJSON.documento);
 				$("#idEditar").val(objJSON.idrl);
-				$("#guardar").val("Update");
+				$("#guardar").val("Actualizar");
 				$("#guardar").attr( 'onclick', 'actionEditAJAX();');
 			}
 			else
 			{
-				alert("Ocurrió un error desconocidor");
+				alert("Ocurrió un error desconocido.");
 			}	
 		}
 	});

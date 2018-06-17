@@ -1,9 +1,3 @@
-<?php
-
-	$topnav = file_get_contents("paginas/administrador.php");
-	echo $topnav."<br><br>";
-
-?>
 <div id="divsito2">Registro de Interesado</div>
 	<script src="scripts/jquery.js" type="text/javascript"></script>
 	<script src="paginas/Registro/js.js" type="text/javascript"></script>

@@ -1,4 +1,7 @@
-<?php
+<?php 
+  if (!isset($_SESSION['usuario'])) {
+    header('Location: index.php');
+  }
 
 	$topnav = file_get_contents("paginas/administrador.php");
 	echo $topnav."<br><br>";

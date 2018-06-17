@@ -16,12 +16,15 @@
 
 		$id = $unsoloregistro['id_grupo'];
 		$name = $unsoloregistro['nombre_grupo'];
-		$arJSON = array('idrl'=>$id,'namerl'=>$name);
+		$idEd = $unsoloregistro['c_edificio_id_edificio'];
+		$idAu = $unsoloregistro['c_aula_id_aula'];
+		$idH = $unsoloregistro['horario_id_horario'];
+		$arJSON = array('idrl'=>$id,'namerl'=>$name, 'Edi'=>$idEd, 'Au'=>$idAu, 'Hr'=>$idH);
 		echo json_encode($arJSON);
 	}
 	else
 	{
-		echo "ahhhh no jaló :c";
+		echo "Not working";
 	}
 
 ?>

@@ -31,7 +31,18 @@
 			
 		<div id="barra_enlaces">
 			<table>
-				<td> <a href="?link=administrador">Iniciar Sesión</a> </td>
+				<td> <a href="?link=login">
+							<?php
+							session_start();
+  							if (!isset($_SESSION['usuario'])) {
+  								echo "Iniciar Sesion";
+  							}
+  							else{
+  							echo "Usuario: ".$_SESSION['usuario'];
+  							}
+							?>
+			</a></td>
+				<td> <a href="?link=registro">Pre-Registro</a> </td>
 				<td><a href="">Oferta Educativa</a> </td>
 				<td><a href="">Información de Pago</a> </td>
 				<td><a href="">Preguntas Frecuentes</a> </td>

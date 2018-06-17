@@ -13,10 +13,10 @@
 	{
 		//Obtenemos los datos y los regresamos usando la notación JSON
 		$unsoloregistro = mysqli_fetch_array($result);
-
+		$id = $unsoloregistro['idpago'];
 		$cantidad = $unsoloregistro['cantidad'];
 		$documento = $unsoloregistro['tipo_documento'];
-		$arJSON = array('cantidad'=>$cantidad,'documento'=>$documento);
+		$arJSON = array('cantidad'=>$cantidad,'documento'=>$documento,'idr1'=>$id);
 		echo json_encode($arJSON);
 	}
 	else
