@@ -16,7 +16,7 @@
 		$id = $unsoloregistro['idpago'];
 		$cantidad = $unsoloregistro['cantidad'];
 		$documento = $unsoloregistro['tipo_documento'];
-		$arJSON = array('cantidad'=>$cantidad,'documento'=>$documento,'idr1'=>$id);
+		$arJSON = array('cantidad'=>$cantidad,'documento'=>$documento,'idrl'=>$id);
 		echo json_encode($arJSON);
 	}
 	else
