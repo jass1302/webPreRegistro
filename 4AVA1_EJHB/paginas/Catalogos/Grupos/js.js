@@ -29,7 +29,7 @@ function guardarAjax()
 			alert("Error: "+p2);
 		},
 		success:function(respuesta,estado,jqxhr){
-			alert("Exito: "+respuesta);
+			//alert("Exito: "+respuesta);
 			actionReadAJAX();
 		}
 

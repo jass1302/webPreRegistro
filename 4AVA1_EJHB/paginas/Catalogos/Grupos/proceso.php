@@ -13,11 +13,11 @@
 	//Paso 3: Cadena de Alta de tipo de pagos
 	$QueryAlta = 
 	"INSERT INTO c_grupo(id_grupo, nombre_grupo, c_aula_id_aula, c_edificio_id_edificio, horario_id_horario) 
-	VALUES(null,'".$varName."','".$varidAu."','".$varidEd."','".$varidAu."')";
+	VALUES(null,'".$varName."','".$varidAu."','".$varidEd."','".$varidH."')";
 
 	//Paso 4: Ejecutar Consulta
 	mysqli_query($Link,$QueryAlta);
-	echo $QueryAlta;
+	//echo $QueryAlta;
 	if(mysqli_affected_rows($Link)>0)
 	{
 		echo "Registro exitoso";
