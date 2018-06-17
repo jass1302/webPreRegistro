@@ -24,14 +24,13 @@
       require_once 'paginas/pie.php';
 
       ?>
-
-
-    <?php
+     
+       <?php
     $link =  new mysqli("localhost","upiiz_hernandeze","hernandeze");
     
     $bd = "CREATE DATABASE IF NOT EXISTS `curso_de_preparacion` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci ;";
+    
     mysqli_query($link,$bd);
-
     $profesor = "CREATE TABLE IF NOT EXISTS `curso_de_preparacion`.`profesor` (
   `numero_empleado` VARCHAR(10) NOT NULL,
   `nombre` VARCHAR(15) NULL,
@@ -221,6 +220,9 @@
     PRIMARY KEY (`id_administrador`))";
    mysqli_query($link,$admn);
 
+   $us1 = "INSERT INTO `curso_de_preparacion`.`administrador` (`id_administrador`, `nombre`, `ape_paterno`, `ape_materno`, `usuario`, `passwoord`) VALUES
+     ('2017670591', 'Jassiel', 'Hernandez', 'Basurto', 'Jass13_02', 'upiiz100')";
+     mysqli_query($link,$us1);
 
  $cali = "CREATE TABLE IF NOT EXISTS `curso_de_preparacion`.`calificacion` (
   `id_calificacion` INT NOT NULL AUTO_INCREMENT,
@@ -337,5 +339,5 @@ $asisC1 = "ALTER TABLE `curso_de_preparacion`.`asistencia`
     mysqli_query($link,$asisA2);
     mysqli_query($link,$asisA3);
     mysqli_query($link,$asisC1);
-    
-    ?> 
+
+    ?>
